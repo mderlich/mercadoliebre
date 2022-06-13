@@ -1,0 +1,490 @@
+/*
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+*/
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;    
+}
+
+
+/* 
+header
+--------------------------------------------- 
+*/
+header {
+    background-color: #EAC926;
+    padding: 20px;
+    width: 100%;
+    /*"Para que quede el header arriba"*/
+    position: sticky;
+    top: 0;
+    z-index: 1; 
+
+
+}
+
+header a {
+    color: #03264C;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+
+
+
+
+.logo {
+    width: 200px;
+}
+
+
+.navbar-textocentrado {
+    font-weight: 400;
+    text-align: center;
+    margin: 5px;
+}
+
+
+.navbar-main {
+    display: none;
+    width: 100%;
+}
+
+
+.navbar-main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.burger-menu {
+    color: white;
+    background-color: #1259c3;
+    text-align: center;
+    font-size: 2em;
+    width: 60px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.banner {
+    width: 100%;
+    
+}
+
+/* 
+MAIN
+--------------------------------------------- 
+*/
+
+main{
+    width: 90%;
+    margin: auto;
+    background-color: #ebebeb;
+
+}
+
+
+
+
+.titulosh2 {
+    font-size: 24px;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.section_contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article_detail{
+    background-color: white;
+    margin-bottom: 10px;
+    width: 100%;
+    /* la sombra se aplica solo en > tablets
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    */
+}
+
+
+
+
+.img-items{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+
+
+
+.contenidoarticulos {
+    text-align: left;
+    padding: 15px;
+    border-top: 1px solid #ebebeb;
+    position: relative; /* << necesario para ubicar el icono del camion */
+}
+
+/* camion */
+.camion {
+
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+
+    display: block;  
+    position: absolute;  /* << funciona correctamente si su elemento contenedor 
+    esta indicado con relative, en nuestro caso... contenidoarticulos */
+    right: 20px;
+    top: -15px;
+    
+
+}
+
+
+.pdcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+}
+
+.precios {
+    font-size: 18px;
+    font-weight: bold;
+    flex-grow: 30%;  
+}
+
+.descuentos {
+    font-size: 16px;
+    color: #39b54a;
+    flex-grow: 70%;  
+    padding-left: 7px;
+
+}
+
+.descripciones {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    visibility: hidden;
+}
+
+.article_detail:hover .contenidoarticulos i {
+    transition: 1000ms;
+    transform: rotate(-90deg);
+}
+
+/* 
+FOOTER
+--------------------------------------------- 
+*/
+
+
+footer{
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 2px;
+    padding-bottom: 30px;
+}
+
+.footer_contenedor_iconos{
+display: flex ;
+flex-wrap: wrap;
+width: 90%;
+margin: auto;
+
+}
+
+.footer-centrado {
+    text-align: center;
+    font-size: 16px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+
+
+.iconos_footer {
+    color: #1259c3;
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+}
+
+.iconos_footer:hover{
+    color: #0022AA;
+}
+
+
+
+.copyright_footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* FORMULARIOS
+-------------------------------- */
+
+.form_search{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    text-align: center;
+}
+
+
+.form_search input{
+    height: 30px;
+}
+
+.form_search button{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #666;
+}
+
+/* FORMULARIOS REGISTRO / LOGIN
+-------------------------------- */
+
+
+.form_register{
+    width: 80%;
+    max-width: 350px;
+    margin: auto;
+    padding: 25px 15px;
+}
+
+form h3 {
+     margin-bottom: 20px;
+}
+
+.form_divs{
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.perfil_usuario{
+    margin-bottom: 20px;
+    display: flex;
+}
+
+
+.perfil_usuario label{
+
+    padding-left: 20px;
+
+}
+
+
+.intereses {
+    display: flex;
+    flex-direction: column;   
+    margin: 0;
+    margin-bottom: 20px;  
+
+
+
+}
+
+.check{
+    display: flex;  
+    margin: 10px;
+}
+
+.check input{
+    width: 20px;
+}
+.check label{
+
+    padding-left: 20px;
+
+}
+
+
+
+
+
+
+
+
+.form_register input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+}
+
+
+
+.form_botones{
+    background-color: #1259c3;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 45%;
+    height: 50px;
+    cursor: pointer;
+    
+
+
+}
+
+.form_botonesx2{
+display: flex;
+justify-content: space-between;
+}
+
+.bg_azul{
+    width: 100%;
+}
+
+.form_botones:hover{
+    
+    /* OBS pedian este color, pero se percibe poco el cambio #0022AA*/
+    background-color: #0022AA;
+
+    
+}
+
+
+
+
+
+/* MEDIA 360 PX 
+Navegación en tablets
+-------------------------------- */
+@media (min-width: 360px) {
+
+
+
+
+    .article_detail{
+        width: 48%;
+        margin-bottom: 21px;
+    
+
+    }
+    .article_detail:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .article_detail:hover .descripciones{
+        visibility: visible;
+
+
+    }
+
+    .navbar-main {
+        visibility: visible;
+
+    }
+
+}
+
+/* MEDIA 768 PX 
+Navegación en desktop
+-------------------------------- */
+@media (min-width: 768px) {
+
+    .form_search input{
+        width: 250px;
+    }
+  
+    .mainheader, .navbar-main{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .mainheader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* copyheader */
+    .navbar-textocentrado{
+        text-align: right;
+/*         max-width: 200px;
+ */    }
+    .burger-menu {
+    display: none;
+    }
+
+
+    
+
+    .article_detail{
+        width: 23%;
+    }
+
+    .article_detail:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .article_detail:hover .descripciones{
+        visibility: visible;
+        
+    }
+
+    .navbar-main {
+        display: flex; 
+        justify-content: space-between;
+    }
+
+    .navbar-main ul {
+        display: flex; 
+        justify-content: space-between;
+    }
+    .navbar-left li {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    .navbar-right li {
+        margin-top: 0;
+        margin-left: 15px;
+        margin-right: 0;
+    }
+    .navbar-right i {
+        margin-left: 5px;
+    }
+    
+
+
+    
+}
+
+
